@@ -1,18 +1,12 @@
-import Centro from "../src/components/centro/Centro"
-import Header from "../src/components/header/Header"
+import GamePage from '../src/components/gamePage/GamePage'
+import Title from "../src/components/title/Title"
 
 import Head from 'next/head'
 
-function Index() {
+function HomePage() {
     return(
-        <>
-            <Head>
-                <title>Jogo da Velha</title>
-            </Head>
-            <Header>Jogo da Velha</Header>
-            <Centro />
-        </>
+        <GamePage/>
     )
 }
 
-export default Index
+export default HomePage

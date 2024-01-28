@@ -1,14 +1,14 @@
 import styles from './Header.module.css'
 
+import Title from '../title/Title'
+import Subtitle from '../subtitle/Subtitle'
+
 function Header(props) {
     return(
-        <header className={styles.header}>
-            <h1>{props.children}</h1>
-            <div className={styles.div}>
-                <p>Criado por Pedro Aparecido</p>
-                <img src="" alt="" />
-            </div>
-        </header>
+        <div className={styles.header}>
+            <Title>Jogo da Velha</Title>
+            <Subtitle>Criado por Pedro Aparecido</Subtitle>
+        </div>
     )
 }
 
