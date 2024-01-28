@@ -1,0 +1,45 @@
+.principal {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.esquerda {
+    padding-right: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: self-end;
+}
+
+.retangulo {
+    display: flex;
+}
+
+.q {
+    width: 35px;
+    height: 35px;
+    border: solid 1px;
+    border-radius: 5px;
+    margin: 5px;
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.direita {
+    padding-left: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.direitaComponents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
