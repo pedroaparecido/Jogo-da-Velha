@@ -1,3 +1,5 @@
+import classNames from 'classnames'
+
 import styles from './GameOption.module.css'
 import Icon from '../icon/Icon'
 
@@ -5,7 +7,14 @@ const GameIcon = ({ iconName }) => <Icon iconName={iconName} size="25px" />
 
 function GameOption(props) {
     return(
-        <div className={styles.gameOption} onClick={props.onClick}>
+        <div
+        className={
+            classNames(styles.gameOption, {
+                [styles.winner]: props.isWinner
+            })
+        }
+        onClick={props.onClick}
+        >
             {
                 props.status === 1 && <Icon iconName="circle" size="25px" />
             }
