@@ -4,15 +4,13 @@ import Button from '../button/Button'
 
 function GameInfo(props) {
 
-    const shouldEnableButton = () => {
-        if(props.winner !== 0) return true
-    }
+    const shouldEnableButton = () => props.winner !== 0 || props.isDraw
 
     return(
         <div className={styles.gameInfo}>
 
             {
-                props.winner === 0 &&
+                !props.isDraw && props.winner === 0 &&
                 <>
                     <h4>Próximo a jogar:</h4>
                     {
@@ -24,7 +22,7 @@ function GameInfo(props) {
                 </>
             }
             {
-                props.winner !== 0 &&
+                !props.isDraw && props.winner !== 0 &&
                 <>
                     <h4>Fim de jogo! Campeão:</h4>
                     {
@@ -34,6 +32,9 @@ function GameInfo(props) {
                         props.winner === -1 && <Icon iconName="x" />
                     }
                 </>
+            }
+            {
+                props.isDraw && <h4>Empate!</h4>
             }
             <Button
                 onClick={props.onReset}

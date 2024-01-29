@@ -10,7 +10,8 @@ function GameOption(props) {
         <div
         className={
             classNames(styles.gameOption, {
-                [styles.winner]: props.isWinner
+                [styles.winner]: props.isWinner,
+                [styles.draw]: props.isDraw
             })
         }
         onClick={props.onClick}
