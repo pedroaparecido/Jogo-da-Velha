@@ -5,7 +5,7 @@ const GameIcon = ({ iconName }) => <Icon iconName={iconName} size="25px" />
 
 function GameOption(props) {
     return(
-        <div className={styles.gameOption}>
+        <div className={styles.gameOption} onClick={props.onClick}>
             {
                 props.status === 1 && <Icon iconName="circle" size="25px" />
             }
