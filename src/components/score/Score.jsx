@@ -8,11 +8,11 @@ function Score(props) {
             <div className={styles.score}>
                 <div className={styles.scoreContent}>
                     <Icon iconName="circle" />
-                    <h2>0</h2>
+                    <h2>{props.circle}</h2>
                 </div>
                 <div className={styles.scoreContent}>
                     <Icon iconName="x" />
-                    <h2>0</h2>
+                    <h2>{props.x}</h2>
                 </div>
             </div>
         </>
